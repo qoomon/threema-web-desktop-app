@@ -1,0 +1,34 @@
+#background-image,
+header,
+footer {
+  display: none !important;
+}
+
+#welcome:before{
+  display: block;
+  max-width: 400px;
+  margin: 16vh auto 48px auto;
+  content: url('/img/logo.svg'); 
+  -webkit-filter: invert(100%)
+}
+
+#main-wrapper {
+  width: 100vw !important;
+  height: 100vh !important;
+  max-width: none !important;
+  max-height: none !important;
+}
+
+#main {
+  height: inherit !important;
+  border-radius: 0 !important;
+}
+
+#navigation-topheader {
+  background-color: #323232 !important;
+}
+
+.my-identity {
+  width: 0 !important;
+  padding-right: 32px !important;
+}
