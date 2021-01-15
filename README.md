@@ -1,5 +1,7 @@
 # threema-web-desktop-app
-<img src="icon.png" width="100" height="100">
+<a href="https://github.com/qoomon/threema-web-desktop-app/releases">
+  <img src="icon.png" width="100" height="100">
+</a>
 
 This is an desktop app for [`threema.web`](https://web.threema.ch), build with [nativefier](https://github.com/jiahaog/nativefier)
 
