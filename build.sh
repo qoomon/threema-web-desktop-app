@@ -7,4 +7,6 @@ nativefier 'https://web.threema.ch' \
   --zoom 0.9 \
   --inject 'app.css' \
   --single-instance \
-  # --disable-dev-tools
+  --electron-version 11.1.1
+  
+  # INFO electron version 11.2.0 is broken
