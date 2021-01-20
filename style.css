@@ -127,8 +127,23 @@ md-card.md-threema-theme {
   border-image: unset !important;
 }
 
-#navigation-conversations .conversation-wrapper .conversation.starred:last-child {
-  border-bottom: 2px solid #a2a2a2 !important;
+#navigation-conversations .badge.unread-count {
+    z-index: 1;
+}
+#navigation-conversations .conversation-wrapper .conversation.starred{
+    position: relative;
+}
+#navigation-conversations .conversation-wrapper .conversation.starred:after {
+  position: absolute;
+  top: 14px;
+  right: 3px;
+  width:16px;
+  height: 16px;
+  content: "";
+  background-image: url('/img/ic_unpin.svg');
+  background-size:contain;
+  border-radius:50%;
+  -webkit-filter: invert(40%) !important;
 }
 
 #navigation-conversations .conversation-wrapper .conversation:hover {
