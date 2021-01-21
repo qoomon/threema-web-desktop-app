@@ -7,4 +7,4 @@ This is an desktop app for [`threema.web`](https://web.threema.ch) with dark the
 </a>
 
 ### Build It Yourself
-Just run [`./build.sh`](`build.sh`) script and you will get your nativefied app of [`threema.web`](https://web.threema.ch)
+Just run [`./build.sh`](`./build.sh`) script and you will get your nativefied app of [`threema.web`](https://web.threema.ch)
