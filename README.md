@@ -1,5 +1,5 @@
 # threema-web-desktop-app
-This is an desktop app for [`threema.web`](https://web.threema.ch), build with [nativefier](https://github.com/jiahaog/nativefier)
+This is an desktop app for [`threema.web`](https://web.threema.ch) with dark theme, build with [nativefier](https://github.com/jiahaog/nativefier).
 
 ### Downloads Prebuild Release Artifacts
 <a href="https://github.com/qoomon/threema-web-desktop-app/releases">
