@@ -2,9 +2,15 @@ localStorage.setItem("settings-userInterface", "minimal");
 
 const style = document.createElement('style');
 style.textContent = `
-:root {
-    --default-color: lightgray;
-    --default-dim-color: gray;
+
+body:not(.expanded) #messenger {
+    height: 100% !important;
+}
+
+#navigation-topheader,
+#conversation-header,
+#receiver-detail-header{
+    -webkit-app-region: drag;
 }
 
 #main-wrapper > header {
@@ -16,11 +22,22 @@ style.textContent = `
     border-image: unset !important;
 }
 
-.my-identity {
-    visibility: hidden;
+#navigation-topheader .my-identity {
+    align-self: end;
+    margin-bottom: 10px;
+}
+
+#navigation-topheader .my-identity span {
+    font-size: large;
 }
 
 @media (prefers-color-scheme: dark) {
+    :root {
+        --default-background-color: #11181d;
+        --default-color: lightgray;
+        --default-dim-color: gray;
+    }
+
 	body {
 		color: lightgray;
 	}
@@ -35,7 +52,7 @@ style.textContent = `
     }
 
 	#main {
-		background-color: #11181d;
+		background-color: var(--default-background-color);
 	}
 
 	#background-image {
@@ -43,7 +60,7 @@ style.textContent = `
 	}
 
     #messenger #detail>div.ng-scope {
-        background-color: #11181d;
+        background-color: var(--default-background-color);
     }
 
 	.material-icons,
@@ -83,7 +100,7 @@ style.textContent = `
 	#navigation,
 	#navigation-header,
 	#navigation-conversations {
-		background-color: #11181d !important;
+		background-color: var(--default-background-color) !important;
 	}
 
 	#navigation {
@@ -135,7 +152,6 @@ style.textContent = `
 		color: var(--default-dim-color);
 	}
 
-
 	#conversation-chat .chat .message-out .message-body,
 	#conversation-chat .chat .message-out .bubble-triangle::before,
 	#conversation-chat .chat .message-out .bubble-triangle::after {
@@ -156,9 +172,21 @@ style.textContent = `
 		color: #00baff !important;
 	}
 
-	#conversation-footer {
-		background-color: #141d24 !important;
+    .message-quote-content[style="border-color: rgb(0, 0, 0);"] {
+        border-color: var(--default-color) !important;
+    }
+
+    .message-quote-content .message-name[style="color: rgb(0, 0, 0);"] {
+        color: var(--default-color) !important;
+    }
+
+    .message-quote {
+		color: var(--default-dim-color) !important;
 	}
+
+    #conversation #conversation-quote {
+        background-color: var(--default-background-color);
+    }
 
 	#navigation-header .search input[type='search'],
 	#conversation-footer .chat-input compose-area>div:first-child>div:nth-of-type(2) {
@@ -166,6 +194,10 @@ style.textContent = `
 		background-color: #0e1418;
 		color: unset;
 		outline: none;
+	}
+
+    #conversation-footer {
+		background-color: #141d24 !important;
 	}
 
 	#conversation-footer .chat-input compose-area>div:first-child>div:nth-of-type(2) .compose:empty::before {
