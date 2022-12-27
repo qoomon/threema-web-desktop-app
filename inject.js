@@ -63,7 +63,6 @@ body:not(.expanded) #messenger {
         background-color: var(--default-background-color);
     }
 
-	.material-icons,
 	.material-icons.md-light,
 	.material-icons.md-dark,
 	md-icon.md-threema-theme,
